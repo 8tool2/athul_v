@@ -1,15 +1,24 @@
 import React from 'react';
 import styles from './Hero.module.css';
 import heroImg from '../../assets/assets/hero-img.png';
-import themeIcon from '../../assets/assets/sun.svg';
-import twitterIcon from '../../assets/assets/twitter-light.svg';
-import githubIcon from '../../assets/assets/github-light.svg';
-import linkedinIcon from '../../assets/assets/linkedin-light.svg';
+import sun from '../../assets/assets/sun.svg';
+import moon from '../../assets/assets/moon.svg';
+import twitterIconLight from '../../assets/assets/twitter-light.svg';
+import twitterIconDark from '../../assets/assets/twitter-dark.svg';
+import githubIconLight from '../../assets/assets/github-light.svg';
+import githubIconDark from '../../assets/assets/github-dark.svg';
+import linkedinIconLight from '../../assets/assets/linkedin-light.svg';
+import linkedinIconDark from '../../assets/assets/linkedin-dark.svg';
 import CV from '../../assets/assets/cv.pdf';
 import { useTheme } from '../../common/themecontext/ThemeContext'; // Import useTheme hook
 
 function Hero() {
-  const { toggleTheme } = useTheme(); // Access toggleTheme function through useTheme hook
+  const { theme, toggleTheme } = useTheme(); // Access toggleTheme function through useTheme hook
+  const themeIcon = theme == 'light' ? sun:moon;
+  const twitterIcon = theme == 'light' ? twitterIconLight:twitterIconDark;
+  const githubIcon = theme == 'light' ? githubIconLight:githubIconDark;
+  const linkedinIcon = theme == 'light' ? linkedinIconLight:linkedinIconDark;
+
 
   return (
     <section id="Hero">

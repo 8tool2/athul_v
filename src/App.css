@@ -1,1 +1,19 @@
+:root{
+    --background-color:white;
+    --btn-color : rgb(72, 136, 161);
+    --btn-text-color: white; 
+    --project-card-bg: black; 
+    --text-color:grey ;
+    --footer-text-color:grey; 
+} 
+
+[data-theme='dark']{
+    --background-color: rgb(62, 62, 62) ; 
+    --btn-color: blue ; 
+    --text-color:white;
  
+}
+
+body{
+    background-color: var(--background-color);
+}
