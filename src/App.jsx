@@ -1,6 +1,6 @@
-import Hero from './sections/Hero/Hero';
+import Hero from './sections/Hero';
 import './App.css';
-import { ThemeProvider } from './common/themecontext/ThemeContext';
+import { ThemeProvider } from './common/ThemeContext';
 
 function App() {
   
